@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог запчастей насоса</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container header-inner">
+        <a href="index.html" class="logo" style="color: #ffffff !important; text-decoration: none;">
+          <strong>СЗЛК</strong> Производство
+        </a>
+        <nav class="top-nav">
+          <a href="#">ТЕХНИЧЕСКАЯ ДОКУМЕНТАЦИЯ</a>
+          <span class="nav-sep">/</span>
+          <a href="index.html" class="active">ЗАПАСНЫЕ ЧАСТИ</a>
+        </nav>
+      </div>
+    </div>
+    <div class="header-red-line"></div>
+  </header>
+
+  <main class="container main-content">
+    <div class="page-header">
+      <div class="breadcrumbs">
+        <a href="index.html">Каталог деталей</a> <span class="sep">/</span>
+        <a id="crumb-customer" href="#">...</a> <span class="sep">/</span>
+        <span class="current" id="crumb-pump">...</span>
+      </div>
+      
+      <div class="title-row">
+        <div class="title-left">
+          <div class="subtitle-small">СПРАВОЧНИК ЗАПАСНЫХ ЧАСТЕЙ</div>
+          <h1 class="page-title" id="pump-title">Насос ...</h1>
+          <p class="page-desc">Таблица соответствия деталей и позиционных номеров на сборочных схемах.</p>
+        </div>
+        <div class="title-right">
+          <div class="doc-name" id="doc-name">...</div>
+          <div class="doc-source">Лист-источник: <span id="doc-source">...</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-panel">
+      <div class="search-input-wrapper">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="search-input" placeholder="Найти деталь, артикул или позицию на схеме">
+        <button id="search-clear" class="search-clear" style="display: none;" title="Сбросить поиск">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="search-results-count">
+        <strong id="results-count">0</strong> из <span id="total-count">0</span> позиций
+      </div>
+    </div>
+
+    <div class="table-container">
+      <div class="table-header-bar">
+        <div class="table-title">Перечень деталей · <span id="table-model-name">...</span></div>
+        <div class="table-note">Порядок и значения колонок сохранены по исходному листу</div>
+      </div>
+      
+      <!-- Основной контейнер, куда pump.js вставит одну или несколько таблиц -->
+      <div class="table-scroll" id="table-scroll">
+        <table class="parts-table" id="parts-table">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div id="no-results" class="empty-results" style="display: none;">
+        <div class="empty-title">Совпадений не найдено</div>
+        <div class="empty-text">Проверьте написание или ищите по артикулу и номеру позиции.</div>
+        <button class="btn-outline" id="btn-reset-search">Сбросить поиск</button>
+      </div>
+
+      <div class="table-footer">
+        <div class="footer-left">Источник данных: <span id="footer-source">...</span></div>
+        <div class="footer-right">Записей в каталоге: <span id="footer-total">0</span></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Модальное окно для увеличения картинок -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <img src="" alt="Увеличенная схема">
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/pump.js"></script>
+</body>
+</html>

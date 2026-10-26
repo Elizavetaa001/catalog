@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог запчастей — Заказчики</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container header-inner">
+        <!-- Логотип сделан белым и кликабельным -->
+        <a href="index.html" class="logo" style="color: #ffffff !important; text-decoration: none;">
+          <strong>СЗЛК</strong> Производство
+        </a>
+        <nav class="top-nav">
+          <a href="#">ТЕХНИЧЕСКАЯ ДОКУМЕНТАЦИЯ</a>
+          <span class="nav-sep">/</span>
+          <a href="index.html" class="active">ЗАПАСНЫЕ ЧАСТИ</a>
+        </nav>
+      </div>
+    </div>
+    <div class="header-red-line"></div>
+  </header>
+
+  <main class="container main-content">
+    <div class="page-header">
+      <div class="breadcrumbs">
+        <span class="current">Каталог деталей</span>
+      </div>
+      
+      <div class="title-row">
+        <div class="title-left">
+          <div class="subtitle-small">СПРАВОЧНИК ЗАПАСНЫХ ЧАСТЕЙ</div>
+          <h1 class="page-title">Заказчики</h1>
+          <p class="page-desc">Выберите организацию для просмотра каталога насосов.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="customer-list" class="grid-customers"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© СЗЛК Производство. Внутренний каталог запасных частей насосов.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
